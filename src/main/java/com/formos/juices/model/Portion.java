@@ -8,6 +8,11 @@ import java.util.Objects;
 
 public class Portion {
 
+    private static final int FRUIT_JUICE_PER_BLEND = 50;
+    private static final int ICE_PER_BLEND = 30;
+    private static final int CONDENSED_MILK_PER_BLEND = 20;
+    private static final int SUGAR_PER_BLEND = 8;
+
     private Ingredient ingredient;
     private int quantity;
     private int actualInventory;
@@ -30,32 +35,32 @@ public class Portion {
         return actualInventory;
     }
 
-    public static Portion createStrawberryIngredient() {
-        return new Portion(Ingredient.Strawberry, 50, Inventory.getInventory().getStrawberry());
+    public static Portion createStrawberryPortion() {
+        return new Portion(Ingredient.Strawberry, FRUIT_JUICE_PER_BLEND, Inventory.getInventory().getStrawberry());
     }
 
-    public static Portion createBananaIngredient() {
-        return new Portion(Ingredient.Banana, 50, Inventory.getInventory().getBanana());
+    public static Portion createBananaPortion() {
+        return new Portion(Ingredient.Banana, FRUIT_JUICE_PER_BLEND, Inventory.getInventory().getBanana());
     }
 
-    public static Portion createMangoIngredient() {
-        return new Portion(Ingredient.Mango, 50, Inventory.getInventory().getMango());
+    public static Portion createMangoPortion() {
+        return new Portion(Ingredient.Mango, FRUIT_JUICE_PER_BLEND, Inventory.getInventory().getMango());
     }
 
-    public static Portion createIceIngredient() {
-        return new Portion(Ingredient.Ice, 30, Inventory.getInventory().getIce());
+    public static Portion createIcePortion() {
+        return new Portion(Ingredient.Ice, ICE_PER_BLEND, Inventory.getInventory().getIce());
     }
 
-    public static Portion createCondensedMilkIngredient() {
-        return new Portion(Ingredient.CondensedMilk, 20, Inventory.getInventory().getCondensedMilk());
+    public static Portion createCondensedMilkPortion() {
+        return new Portion(Ingredient.CondensedMilk, CONDENSED_MILK_PER_BLEND, Inventory.getInventory().getCondensedMilk());
     }
 
-    public static Portion createSugarIngredient() {
-        return new Portion(Ingredient.Sugar, 8, Inventory.getInventory().getSugar());
+    public static Portion createSugarPortion() {
+        return new Portion(Ingredient.Sugar, SUGAR_PER_BLEND, Inventory.getInventory().getSugar());
     }
 
     public static List<Portion> getComplements() {
-        return Arrays.asList(createIceIngredient(), createCondensedMilkIngredient(), createSugarIngredient());
+        return Arrays.asList(createIcePortion(), createCondensedMilkPortion(), createSugarPortion());
     }
 
     @Override

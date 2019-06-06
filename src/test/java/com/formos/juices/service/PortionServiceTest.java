@@ -27,10 +27,10 @@ public class PortionServiceTest {
     public void getStrawberryDrinkIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getStrawberryDrinkIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createStrawberryIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createStrawberryPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
@@ -38,10 +38,10 @@ public class PortionServiceTest {
     public void getBananaDrinkIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getBananaDrinkIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createBananaIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createBananaPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
@@ -49,10 +49,10 @@ public class PortionServiceTest {
     public void getMangoDrinkIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getMangoDrinkIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createMangoIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createMangoPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
@@ -60,11 +60,11 @@ public class PortionServiceTest {
     public void getStrawberryAndBananaDrinkIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getStrawberryAndBananaDrinkIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createStrawberryIngredient(),
-                Portion.createBananaIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createStrawberryPortion(),
+                Portion.createBananaPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
@@ -72,11 +72,11 @@ public class PortionServiceTest {
     public void getStrawberryAndMangoDrinkIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getStrawberryAndMangoDrinkIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createStrawberryIngredient(),
-                Portion.createMangoIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createStrawberryPortion(),
+                Portion.createMangoPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
@@ -84,11 +84,11 @@ public class PortionServiceTest {
     public void getBananaAndMangoDrinkIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getBananaAndMangoDrinkIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createBananaIngredient(),
-                Portion.createMangoIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createBananaPortion(),
+                Portion.createMangoPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 
@@ -96,12 +96,12 @@ public class PortionServiceTest {
     public void getAllFruitsIngredients_returnIngredients() {
         final List<Portion> actual = portionService.getAllFruitsIngredients();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIceIngredient(),
-                Portion.createCondensedMilkIngredient(),
-                Portion.createSugarIngredient(),
-                Portion.createStrawberryIngredient(),
-                Portion.createBananaIngredient(),
-                Portion.createMangoIngredient()));
+                Portion.createIcePortion(),
+                Portion.createCondensedMilkPortion(),
+                Portion.createSugarPortion(),
+                Portion.createStrawberryPortion(),
+                Portion.createBananaPortion(),
+                Portion.createMangoPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
 

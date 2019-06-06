@@ -1,8 +1,8 @@
 package com.formos.juices.model;
 
-import com.formos.juices.utils.StartingInventory;
-
 public class Inventory {
+
+    public static int DEFAULT_STARTING_INVENTORY = 1000;
 
     private int strawberry;
     private int banana;
@@ -23,14 +23,14 @@ public class Inventory {
     }
 
     public static void initializeInventory() {
-        new Inventory(StartingInventory.STRAWBERRY, StartingInventory.BANANA, StartingInventory.MANGO,
-                StartingInventory.ICE, StartingInventory.CONDENSED_MILK, StartingInventory.SUGAR);
+        new Inventory(DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY,
+                DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY);
     }
 
     public static Inventory getInventory() {
         if (inventory == null) {
-            inventory = new Inventory(StartingInventory.STRAWBERRY, StartingInventory.BANANA, StartingInventory.MANGO,
-                    StartingInventory.ICE, StartingInventory.CONDENSED_MILK, StartingInventory.SUGAR);
+            inventory = new Inventory(DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY,
+                    DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY, DEFAULT_STARTING_INVENTORY);
         }
         return inventory;
     }

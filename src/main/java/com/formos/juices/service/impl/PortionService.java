@@ -12,48 +12,48 @@ public class PortionService implements IPortionService {
 
     public List<Portion> getStrawberryDrinkIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createStrawberryIngredient());
+        portions.add(Portion.createStrawberryPortion());
         return portions;
     }
 
     public List<Portion> getBananaDrinkIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createBananaIngredient());
+        portions.add(Portion.createBananaPortion());
         return portions;
     }
 
     public List<Portion> getMangoDrinkIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createMangoIngredient());
+        portions.add(Portion.createMangoPortion());
         return portions;
     }
 
     public List<Portion> getStrawberryAndBananaDrinkIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createStrawberryIngredient());
-        portions.add(Portion.createBananaIngredient());
+        portions.add(Portion.createStrawberryPortion());
+        portions.add(Portion.createBananaPortion());
         return portions;
     }
 
     public List<Portion> getStrawberryAndMangoDrinkIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createStrawberryIngredient());
-        portions.add(Portion.createMangoIngredient());
+        portions.add(Portion.createStrawberryPortion());
+        portions.add(Portion.createMangoPortion());
         return portions;
     }
 
     public List<Portion> getBananaAndMangoDrinkIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createBananaIngredient());
-        portions.add(Portion.createMangoIngredient());
+        portions.add(Portion.createBananaPortion());
+        portions.add(Portion.createMangoPortion());
         return portions;
     }
 
     public List<Portion> getAllFruitsIngredients() {
         List<Portion> portions = initializeIngredientsList();
-        portions.add(Portion.createStrawberryIngredient());
-        portions.add(Portion.createBananaIngredient());
-        portions.add(Portion.createMangoIngredient());
+        portions.add(Portion.createStrawberryPortion());
+        portions.add(Portion.createBananaPortion());
+        portions.add(Portion.createMangoPortion());
         return portions;
     }
 

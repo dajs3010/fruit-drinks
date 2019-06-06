@@ -34,7 +34,7 @@ public class FruitDrinkServiceTest {
 
     @Test
     public void prepareFruitDrink_inventoryIsAvailableForFruitIngredient_updateInventory() throws Exception {
-        List<Portion> portions = Arrays.asList(Portion.createBananaIngredient());
+        List<Portion> portions = Arrays.asList(Portion.createBananaPortion());
         SizeType size = SizeType.Small;
         int bananaInventoryExpected = 820;
         fruitDrinkService.prepareFruitDrink(portions, size);
@@ -43,7 +43,7 @@ public class FruitDrinkServiceTest {
 
     @Test
     public void prepareFruitDrink_inventoryIsAvailableForComplementIngredient_updateInventory() throws Exception {
-        List<Portion> portions = Arrays.asList(Portion.createIceIngredient());
+        List<Portion> portions = Arrays.asList(Portion.createIcePortion());
         SizeType size = SizeType.Small;
         int iceInventoryExpected = 910;
         fruitDrinkService.prepareFruitDrink(portions, size);
@@ -53,7 +53,7 @@ public class FruitDrinkServiceTest {
     @Test
     public void prepareFruitDrink_inventoryIsNotAvailableForFruitIngredient_throwException() throws Exception {
         Inventory.getInventory().useStrawberry(900);
-        List<Portion> portions = Arrays.asList(Portion.createStrawberryIngredient());
+        List<Portion> portions = Arrays.asList(Portion.createStrawberryPortion());
         SizeType size = SizeType.Large;
         final Exception exception = Assertions.assertThrows(Exception.class,
                 () -> fruitDrinkService.prepareFruitDrink(portions, size));

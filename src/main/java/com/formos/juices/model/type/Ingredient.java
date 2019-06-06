@@ -4,15 +4,17 @@ import com.formos.juices.model.Inventory;
 
 import java.util.function.Consumer;
 
+import static com.formos.juices.utils.Constants.*;
+
 public enum Ingredient {
 
-    Strawberry(IngredientType.FRUIT, quantity -> Inventory.getInventory().useStrawberry(quantity), 100, 100),
-    Banana(IngredientType.FRUIT, quantity -> Inventory.getInventory().useBanana(quantity), 120, 100),
-    Mango(IngredientType.FRUIT, quantity -> Inventory.getInventory().useMango(quantity), 140, 100),
+    Strawberry(IngredientType.FRUIT, Inventory.getInventory()::useStrawberry, STRAWBERRY_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
+    Banana(IngredientType.FRUIT, Inventory.getInventory()::useBanana, BANANA_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
+    Mango(IngredientType.FRUIT, Inventory.getInventory()::useMango, MANGO_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
 
-    Ice(IngredientType.COMPLEMENT, quantity -> Inventory.getInventory().useIce(quantity), 0, 0),
-    CondensedMilk(IngredientType.COMPLEMENT, quantity -> Inventory.getInventory().useCondensedMilk(quantity), 0, 0),
-    Sugar(IngredientType.COMPLEMENT, quantity -> Inventory.getInventory().useSugar(quantity), 0, 0);
+    Ice(IngredientType.COMPLEMENT, Inventory.getInventory()::useIce, ZERO, ZERO),
+    CondensedMilk(IngredientType.COMPLEMENT, Inventory.getInventory()::useCondensedMilk, ZERO, ZERO),
+    Sugar(IngredientType.COMPLEMENT, Inventory.getInventory()::useSugar, ZERO, ZERO);
 
     private final IngredientType type;
     private final Consumer<Integer> updateInventoryConsumer;
