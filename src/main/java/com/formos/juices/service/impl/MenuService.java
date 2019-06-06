@@ -8,7 +8,6 @@ import com.formos.juices.service.IMenuService;
 import com.formos.juices.service.IPortionService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -41,51 +40,38 @@ public class MenuService implements IMenuService {
 
     public List<Portion> getPortions() {
         int selectedFruit = menuOptionReaderService.getFruitMenuOption();
-        List<Portion> fruitsPortions = new ArrayList<>();
         switch (selectedFruit) {
             case 1:
-                fruitsPortions = portionsService.getStrawberryDrinkPortions();
-                break;
+                return portionsService.getStrawberryDrinkPortions();
             case 2:
-                fruitsPortions = portionsService.getBananaDrinkPortions();
-                break;
+                return portionsService.getBananaDrinkPortions();
             case 3:
-                fruitsPortions = portionsService.getMangoDrinkPortions();
-                break;
+                return portionsService.getMangoDrinkPortions();
             case 4:
-                fruitsPortions = portionsService.getStrawberryAndBananaDrinkPortions();
-                break;
+                return portionsService.getStrawberryAndBananaDrinkPortions();
             case 5:
-                fruitsPortions = portionsService.getStrawberryAndMangoDrinkPortions();
-                break;
+                return portionsService.getStrawberryAndMangoDrinkPortions();
             case 6:
-                fruitsPortions = portionsService.getBananaAndMangoDrinkPortions();
-                break;
+                return portionsService.getBananaAndMangoDrinkPortions();
             default:
                 menuOptionReaderService.printInvalidOptionWarning();
-                getPortions();
+                return getPortions();
         }
-        return fruitsPortions;
     }
 
 
     public SizeType getDrinkSize() {
         int selectedSize = menuOptionReaderService.getSizeMenuOption();
-        SizeType size = null;
         switch (selectedSize) {
             case 1:
-                size = SizeType.Small;
-                break;
+                return SizeType.Small;
             case 2:
-                size = SizeType.Medium;
-                break;
+                return SizeType.Medium;
             case 3:
-                size = SizeType.Large;
-                break;
+                return SizeType.Large;
             default:
                 menuOptionReaderService.printInvalidOptionWarning();
-                getDrinkSize();
+                return getDrinkSize();
         }
-        return size;
     }
 }
