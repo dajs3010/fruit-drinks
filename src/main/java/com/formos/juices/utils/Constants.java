@@ -10,4 +10,8 @@ public class Constants {
 
     public static final int ZERO = 0;
 
+    public static final int SMALL_DRINK_MILLILITERS = 300;
+    public static final int MEDIUM_DRINK_MILLILITERS = 500;
+    public static final int LARGE_DRINK_MILLILITERS = 700;
+
 }

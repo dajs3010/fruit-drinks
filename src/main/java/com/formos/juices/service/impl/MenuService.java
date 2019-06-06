@@ -44,25 +44,22 @@ public class MenuService implements IMenuService {
         List<Portion> fruitsPortions = new ArrayList<>();
         switch (selectedFruit) {
             case 1:
-                fruitsPortions = portionsService.getStrawberryDrinkIngredients();
+                fruitsPortions = portionsService.getStrawberryDrinkPortions();
                 break;
             case 2:
-                fruitsPortions = portionsService.getBananaDrinkIngredients();
+                fruitsPortions = portionsService.getBananaDrinkPortions();
                 break;
             case 3:
-                fruitsPortions = portionsService.getMangoDrinkIngredients();
+                fruitsPortions = portionsService.getMangoDrinkPortions();
                 break;
             case 4:
-                fruitsPortions = portionsService.getStrawberryAndBananaDrinkIngredients();
+                fruitsPortions = portionsService.getStrawberryAndBananaDrinkPortions();
                 break;
             case 5:
-                fruitsPortions = portionsService.getStrawberryAndMangoDrinkIngredients();
+                fruitsPortions = portionsService.getStrawberryAndMangoDrinkPortions();
                 break;
             case 6:
-                fruitsPortions = portionsService.getBananaAndMangoDrinkIngredients();
-                break;
-            case 7:
-                fruitsPortions = portionsService.getAllFruitsIngredients();
+                fruitsPortions = portionsService.getBananaAndMangoDrinkPortions();
                 break;
             default:
                 menuOptionReaderService.printInvalidOptionWarning();

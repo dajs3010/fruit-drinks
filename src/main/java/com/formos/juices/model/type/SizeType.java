@@ -1,16 +1,18 @@
 package com.formos.juices.model.type;
 
+import static com.formos.juices.utils.Constants.*;
+
 public enum SizeType {
 
-    Small(300), Medium(500), Large(700);
+    Small(SMALL_DRINK_MILLILITERS), Medium(MEDIUM_DRINK_MILLILITERS), Large(LARGE_DRINK_MILLILITERS);
 
-    private final int quantity;
+    private final int milliliters;
 
-    SizeType(int quantity) {
-        this.quantity = quantity;
+    SizeType(int milliliters) {
+        this.milliliters = milliliters;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getMilliliters() {
+        return milliliters;
     }
 }

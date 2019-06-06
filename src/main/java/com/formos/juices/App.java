@@ -1,5 +1,6 @@
 package com.formos.juices;
 
+import com.formos.juices.model.FruitDrink;
 import com.formos.juices.model.Inventory;
 import com.formos.juices.model.Portion;
 import com.formos.juices.model.type.SizeType;
@@ -31,9 +32,10 @@ public class App {
             haveToExit = menuService.printPrincipalMenu();
             try {
                 if (!haveToExit) {
-                    final List<Portion> fruitPortions = menuService.getPortions();
+                    final List<Portion> portions = menuService.getPortions();
                     final SizeType sizeType = menuService.getDrinkSize();
-                    fruitDrinkService.prepareFruitDrink(fruitPortions, sizeType);
+                    final FruitDrink fruitDrink = FruitDrink.createFruitDrink(portions, sizeType);
+                    fruitDrinkService.prepareFruitDrink(fruitDrink);
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());

@@ -25,7 +25,7 @@ public class PortionServiceTest {
 
     @Test
     public void getStrawberryDrinkIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getStrawberryDrinkIngredients();
+        final List<Portion> actual = portionService.getStrawberryDrinkPortions();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
                 Portion.createIcePortion(),
                 Portion.createCondensedMilkPortion(),
@@ -36,7 +36,7 @@ public class PortionServiceTest {
 
     @Test
     public void getBananaDrinkIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getBananaDrinkIngredients();
+        final List<Portion> actual = portionService.getBananaDrinkPortions();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
                 Portion.createIcePortion(),
                 Portion.createCondensedMilkPortion(),
@@ -47,7 +47,7 @@ public class PortionServiceTest {
 
     @Test
     public void getMangoDrinkIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getMangoDrinkIngredients();
+        final List<Portion> actual = portionService.getMangoDrinkPortions();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
                 Portion.createIcePortion(),
                 Portion.createCondensedMilkPortion(),
@@ -58,7 +58,7 @@ public class PortionServiceTest {
 
     @Test
     public void getStrawberryAndBananaDrinkIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getStrawberryAndBananaDrinkIngredients();
+        final List<Portion> actual = portionService.getStrawberryAndBananaDrinkPortions();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
                 Portion.createIcePortion(),
                 Portion.createCondensedMilkPortion(),
@@ -70,7 +70,7 @@ public class PortionServiceTest {
 
     @Test
     public void getStrawberryAndMangoDrinkIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getStrawberryAndMangoDrinkIngredients();
+        final List<Portion> actual = portionService.getStrawberryAndMangoDrinkPortions();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
                 Portion.createIcePortion(),
                 Portion.createCondensedMilkPortion(),
@@ -82,7 +82,7 @@ public class PortionServiceTest {
 
     @Test
     public void getBananaAndMangoDrinkIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getBananaAndMangoDrinkIngredients();
+        final List<Portion> actual = portionService.getBananaAndMangoDrinkPortions();
         final List<Portion> expected = new ArrayList<>(Arrays.asList(
                 Portion.createIcePortion(),
                 Portion.createCondensedMilkPortion(),
@@ -91,19 +91,5 @@ public class PortionServiceTest {
                 Portion.createMangoPortion()));
         Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
     }
-
-    @Test
-    public void getAllFruitsIngredients_returnIngredients() {
-        final List<Portion> actual = portionService.getAllFruitsIngredients();
-        final List<Portion> expected = new ArrayList<>(Arrays.asList(
-                Portion.createIcePortion(),
-                Portion.createCondensedMilkPortion(),
-                Portion.createSugarPortion(),
-                Portion.createStrawberryPortion(),
-                Portion.createBananaPortion(),
-                Portion.createMangoPortion()));
-        Assert.assertThat(actual, IsIterableContainingInAnyOrder.containsInAnyOrder(expected.toArray()));
-    }
-
 
 }

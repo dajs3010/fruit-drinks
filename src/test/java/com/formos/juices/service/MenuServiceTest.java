@@ -50,7 +50,7 @@ public class MenuServiceTest {
     @Test
     public void printFruitMenu_choseBananaOption_returnBananaPortion() {
         Mockito.when(menuOptionReaderService.getFruitMenuOption()).thenReturn(2);
-        Mockito.when(portionsService.getBananaDrinkIngredients()).thenReturn(portions);
+        Mockito.when(portionsService.getBananaDrinkPortions()).thenReturn(portions);
         final List<Portion> actual = menuService.getPortions();
         Assert.assertEquals(portions, actual);
     }
@@ -58,7 +58,7 @@ public class MenuServiceTest {
     @Test
     public void printFruitMenu_choseMangoOption_returnMangoPortion() {
         Mockito.when(menuOptionReaderService.getFruitMenuOption()).thenReturn(3);
-        Mockito.when(portionsService.getMangoDrinkIngredients()).thenReturn(portions);
+        Mockito.when(portionsService.getMangoDrinkPortions()).thenReturn(portions);
         final List<Portion> actual = menuService.getPortions();
         Assert.assertEquals(portions, actual);
     }
@@ -66,7 +66,7 @@ public class MenuServiceTest {
     @Test
     public void printFruitMenu_choseStrawberryAndBananaOption_returnStrawberryAndBananaPortion() {
         Mockito.when(menuOptionReaderService.getFruitMenuOption()).thenReturn(4);
-        Mockito.when(portionsService.getStrawberryAndBananaDrinkIngredients()).thenReturn(portions);
+        Mockito.when(portionsService.getStrawberryAndBananaDrinkPortions()).thenReturn(portions);
         final List<Portion> actual = menuService.getPortions();
         Assert.assertEquals(portions, actual);
     }
@@ -74,7 +74,7 @@ public class MenuServiceTest {
     @Test
     public void printFruitMenu_choseStrawberryAndMangoOption_returnStrawberryAndMangoPortion() {
         Mockito.when(menuOptionReaderService.getFruitMenuOption()).thenReturn(5);
-        Mockito.when(portionsService.getStrawberryAndMangoDrinkIngredients()).thenReturn(portions);
+        Mockito.when(portionsService.getStrawberryAndMangoDrinkPortions()).thenReturn(portions);
         final List<Portion> actual = menuService.getPortions();
         Assert.assertEquals(portions, actual);
     }
@@ -82,15 +82,7 @@ public class MenuServiceTest {
     @Test
     public void printFruitMenu_choseBananaAndMangoOption_returnBananaAndMangoPortion() {
         Mockito.when(menuOptionReaderService.getFruitMenuOption()).thenReturn(6);
-        Mockito.when(portionsService.getBananaAndMangoDrinkIngredients()).thenReturn(portions);
-        final List<Portion> actual = menuService.getPortions();
-        Assert.assertEquals(portions, actual);
-    }
-
-    @Test
-    public void printFruitMenu_choseAllFruitsOption_returnAllFruitsPortion() {
-        Mockito.when(menuOptionReaderService.getFruitMenuOption()).thenReturn(7);
-        Mockito.when(portionsService.getAllFruitsIngredients()).thenReturn(portions);
+        Mockito.when(portionsService.getBananaAndMangoDrinkPortions()).thenReturn(portions);
         final List<Portion> actual = menuService.getPortions();
         Assert.assertEquals(portions, actual);
     }

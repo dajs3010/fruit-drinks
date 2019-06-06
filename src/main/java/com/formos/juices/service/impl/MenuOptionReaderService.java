@@ -30,7 +30,6 @@ public class MenuOptionReaderService implements IMenuOptionReaderService {
         System.out.println("4. Strawberry & Banana");
         System.out.println("5. Strawberry & Mango");
         System.out.println("6. Banana & Mango");
-        System.out.println("7. All fruits");
         return scanner.nextInt();
     }
 

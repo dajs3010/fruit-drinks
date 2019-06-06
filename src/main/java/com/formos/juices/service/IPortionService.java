@@ -6,18 +6,16 @@ import java.util.List;
 
 public interface IPortionService {
 
-    List<Portion> getStrawberryDrinkIngredients();
+    List<Portion> getStrawberryDrinkPortions();
 
-    List<Portion> getBananaDrinkIngredients();
+    List<Portion> getBananaDrinkPortions();
 
-    List<Portion> getMangoDrinkIngredients();
+    List<Portion> getMangoDrinkPortions();
 
-    List<Portion> getStrawberryAndBananaDrinkIngredients();
+    List<Portion> getStrawberryAndBananaDrinkPortions();
 
-    List<Portion> getStrawberryAndMangoDrinkIngredients();
+    List<Portion> getStrawberryAndMangoDrinkPortions();
 
-    List<Portion> getBananaAndMangoDrinkIngredients();
-
-    List<Portion> getAllFruitsIngredients();
+    List<Portion> getBananaAndMangoDrinkPortions();
 
 }

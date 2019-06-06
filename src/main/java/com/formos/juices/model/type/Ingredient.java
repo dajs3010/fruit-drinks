@@ -8,9 +8,12 @@ import static com.formos.juices.utils.Constants.*;
 
 public enum Ingredient {
 
-    Strawberry(IngredientType.FRUIT, Inventory.getInventory()::useStrawberry, STRAWBERRY_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
-    Banana(IngredientType.FRUIT, Inventory.getInventory()::useBanana, BANANA_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
-    Mango(IngredientType.FRUIT, Inventory.getInventory()::useMango, MANGO_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
+    Strawberry(IngredientType.FRUIT, Inventory.getInventory()::useStrawberry,
+            STRAWBERRY_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
+    Banana(IngredientType.FRUIT, Inventory.getInventory()::useBanana,
+            BANANA_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
+    Mango(IngredientType.FRUIT, Inventory.getInventory()::useMango,
+            MANGO_GRAMS_FOR_BLEND, BLENDED_FRUIT_JUICE),
 
     Ice(IngredientType.COMPLEMENT, Inventory.getInventory()::useIce, ZERO, ZERO),
     CondensedMilk(IngredientType.COMPLEMENT, Inventory.getInventory()::useCondensedMilk, ZERO, ZERO),
@@ -21,7 +24,8 @@ public enum Ingredient {
     private final int fruitPulpForBlend;
     private final int fruitJuiceBlended;
 
-    Ingredient(IngredientType type, Consumer<Integer> updateInventoryConsumer, int fruitPulpForBlend, int fruitJuiceBlended) {
+    Ingredient(IngredientType type, Consumer<Integer> updateInventoryConsumer, int fruitPulpForBlend,
+               int fruitJuiceBlended) {
         this.type = type;
         this.updateInventoryConsumer = updateInventoryConsumer;
         this.fruitPulpForBlend = fruitPulpForBlend;
